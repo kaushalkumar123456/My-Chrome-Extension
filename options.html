@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Distraction Blocker — Options</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 12px; max-width:720px; }
+    h2 { margin-top: 0; }
+    label { display:block; margin-top:8px; }
+    input[type="text"] { width: 300px; padding:6px; }
+    button { margin-left:6px; padding:6px 8px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom:6px; }
+  </style>
+</head>
+<body>
+  <h2>Distraction Blocker — Options</h2>
+
+  <label>
+    <input type="checkbox" id="enabled" />
+    Enable extension (toggle)
+  </label>
+
+  <label>Default session duration</label>
+  <input type="number" id="defaultHours" min="0" value="0" /> hours
+  <input type="number" id="defaultMinutes" min="0" value="25" /> minutes
+
+  <h3>Blocked sites (blacklist)</h3>
+  <div>
+    <input id="newDomain" type="text" placeholder="e.g. facebook.com" />
+    <button id="addDomain">Add</button>
+  </div>
+
+  <ul id="blacklist"></ul>
+
+  <div style="margin-top:12px">
+    <button id="save">Save Options</button>
+    <span id="status" style="margin-left:10px"></span>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

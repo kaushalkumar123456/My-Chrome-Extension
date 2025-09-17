@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Stay Focused</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 15px;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+      animation: pulse 2s infinite;
+    }
+
+    p {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    #quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      max-width: 80%;
+      line-height: 1.5;
+      color: #ffe066;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+      transition: opacity 1s ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Stay Focused !</h1>
+  <p>This website is blocked during your study hours.<br> Please return to your studies.</p> <br><br><br>
+
+ 
+  <h4>By Kaushal Kumar</h4>
+  <div id="quote"></div>
+
+  <script>
+    const quotes = [
+      "“Success is the sum of small efforts repeated day in and day out.”",
+      "“Don’t watch the clock; do what it does. Keep going.”",
+      "“Push yourself, because no one else is going to do it for you.”",
+      "“The future depends on what you do today.”",
+      "“Great things never come from comfort zones.”",
+      "“Stay disciplined. It always pays off.”"
+    ];
+
+    let index = 0;
+    const quoteElement = document.getElementById("quote");
+
+    function showQuote() {
+      quoteElement.style.opacity = 0;
+      setTimeout(() => {
+        quoteElement.textContent = quotes[index];
+        quoteElement.style.opacity = 1;
+        index = (index + 1) % quotes.length;
+      }, 1000);
+    }
+
+    showQuote();
+    setInterval(showQuote, 5000); // change quote every 5s
+  </script>
+</body>
+</html>
+
+
+
+
