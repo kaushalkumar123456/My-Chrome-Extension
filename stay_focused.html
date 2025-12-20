@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Stay Focused</title>
+
   <style>
     body {
       margin: 0;
@@ -11,78 +13,156 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
       background: linear-gradient(135deg, #6a11cb, #2575fc);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: "Segoe UI", sans-serif;
       color: white;
       text-align: center;
     }
 
+    .container {
+      max-width: 700px;
+      padding: 20px;
+      animation: fadeIn 1.2s ease;
+    }
+
     h1 {
-      font-size: 5rem;
-      margin-bottom: 15px;
-      text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
-      animation: pulse 2s infinite;
+      font-size: 4rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
     }
 
     p {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      font-weight: 500;
+      font-size: 1.5rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    #timer {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: #ffe066;
     }
 
     #quote {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-style: italic;
-      max-width: 80%;
-      line-height: 1.5;
-      color: #ffe066;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-      transition: opacity 1s ease-in-out;
+      max-width: 90%;
+      margin: 0 auto 30px;
+      min-height: 60px;
+      transition: opacity 0.8s ease;
     }
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+    .breath {
+      font-size: 1.2rem;
+      opacity: 0.85;
+      margin-bottom: 25px;
     }
+
+    .cta {
+      font-size: 1.1rem;
+      padding: 12px 26px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      background: white;
+      color: #2575fc;
+      font-weight: bold;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+
+    }
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #6a11cb, #2575fc, #6a11cb);
+  background-size: 600% 600%;
+  animation: gradientFlow 15s ease infinite;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+@keyframes breathe {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+}
+
+
+
+
+
+
   </style>
 </head>
+
 <body>
-  <h1>Stay Focused !</h1>
-  <p>This website is blocked during your study hours.<br> Please return to your studies.</p> <br><br><br>
+  <div class="container">
+    <h1>Stay Focused</h1>
 
- 
-  <h4>By Kaushal Kumar</h4>
-  <div id="quote"></div>
+    <p>This site is blocked during your study session.<br>
+    Your goals matter more than distractions.</p>
 
-  <script>
-    const quotes = [
-      "“Success is the sum of small efforts repeated day in and day out.”",
-      "“Don’t watch the clock; do what it does. Keep going.”",
-      "“Push yourself, because no one else is going to do it for you.”",
-      "“The future depends on what you do today.”",
-      "“Great things never come from comfort zones.”",
-      "“Stay disciplined. It always pays off.”"
-    ];
+    <div id="timer"></div>
 
-    let index = 0;
-    const quoteElement = document.getElementById("quote");
+    <div id="quote"></div>
 
-    function showQuote() {
-      quoteElement.style.opacity = 0;
-      setTimeout(() => {
-        quoteElement.textContent = quotes[index];
-        quoteElement.style.opacity = 1;
-        index = (index + 1) % quotes.length;
-      }, 1000);
-    }
+    <div class="breath">
+      Take a deep breath 🌿<br>
+      Inhale… Hold… Exhale…
+    </div>
 
-    showQuote();
-    setInterval(showQuote, 5000); // change quote every 5s
-  </script>
+    <button class="cta" onclick="window.close()">
+      I’ll return to my studies
+    </button>
+
+
+    <div class="breathing-circle"></div>
+
+
+    <footer>
+      Built with ❤️ by Kaushal Kumar
+    </footer>
+  </div>
+
+  <script src="stay_focused.js"></script>
 </body>
 </html>
-
-
-
 
