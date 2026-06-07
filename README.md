@@ -153,7 +153,7 @@ to Focus Page
 
 Manage focus sessions directly from the browser toolbar.
 
-![Popup](images/popup.png)
+![Popup](images/1.png)
 
 ---
 
@@ -161,7 +161,7 @@ Manage focus sessions directly from the browser toolbar.
 
 Blocked websites automatically redirect to the motivational focus page.
 
-![Block Page](images/block-page.png)
+![Block Page](images/2.png)
 
 ---
 
@@ -169,7 +169,7 @@ Blocked websites automatically redirect to the motivational focus page.
 
 Customize blocked websites and study duration.
 
-![Settings](images/settings-page.png)
+![Settings](images/3.png)
 
 ---
 
