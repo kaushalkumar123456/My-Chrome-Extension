@@ -1,7 +1,7 @@
 # 🚀 Stay Focused – Distraction Blocker Chrome Extension
 
 <p align="center">
-  <img src="images/block-page.png" alt="Stay Focused Banner" width="100%">
+  <img src="images/1.png" alt="Stay Focused Banner" width="100%">
 </p>
 
 <p align="center">
@@ -30,6 +30,11 @@ The extension temporarily blocks distracting websites such as:
 🌐 Any custom website added by the user
 
 Instead of allowing access, the extension redirects users to a motivational focus page that reinforces productive behavior and helps maintain concentration.
+
+
+<p align="center">
+  <img src="images/2.png" alt="Stay Focused Banner" width="100%">
+</p>
 
 ---
 
