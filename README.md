@@ -153,7 +153,7 @@ to Focus Page
 
 Manage focus sessions directly from the browser toolbar.
 
-![Popup](images/1.png)
+![Popup](images/3.png)
 
 ---
 
